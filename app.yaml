@@ -1,5 +1,7 @@
 runtime: go121
 
+default_expiration: 10s
+
 handlers:
 - url: /static
   static_dir: static
@@ -7,3 +9,9 @@ handlers:
 - url: /
   static_files: charles.html
   upload: charles.html
+  secure: optional
+
+- url: /hedge-fun
+  static_files: hedge-fun.html
+  upload: hedge-fun.html
+  secure: optional
